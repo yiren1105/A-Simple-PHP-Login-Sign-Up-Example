@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link href="../css/index.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/forminfo.js"></script>
+</head>
+<body>
+<div class="header">
+    <ul class="respheader">
+        <li><a href="../index.php">Home</a></li>
+        <li class="right"><a href="../includes/signup.html">Sign Up</a></li>
+        <li class="right" ><a href="../includes/login.html">Login</a></li>
+    </ul>
+    <h1>Create your account </h1>
+</div>
+<div class="main">
+    <form action="signup.php" method="post" >
+        <input type="email" placeholder="Email" name="email" id="email" required >
+        <input type="password" placeholder="Password" name="password" id="password" required
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,}"
+        title="At least 8 digits. Must contain a lowercase letter, a uppercase letter and a number.">
+        <input type="password" placeholder="Confirm Password" name="confirmPassword" id="confirmPassword" required>
+        <input type="text" placeholder="First Name" name="firstName" id="firstName" spellcheck="false" required
+        pattern="^[A-Z][a-zA-Z]*" title="only letters accepted.e.g. Tom">
+        <input type="text" placeholder="Last Name" name="lastName" id="lastName" spellcheck="false" required
+        pattern="^[a-zA-Z '.-]*$" title="e.g. Tom, O'regans">
+        <input type="text" placeholder="Street Address.e.g. 123 Coburg Road" name="streetAddress" id="streetAddress" spellcheck="false"
+        pattern="^\s*\S+(?:\s+\S+){2,}">
+        <input type="text" placeholder="Postal Code.e.g. B3H1Y5" name = "postalCode" id="postalCode" style="text-transform: uppercase"
+        pattern="^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-XYZ]\d$" title="e.g. B3H1Y5">
+        <button class="button button1" name="submit" type="submit">Sign Up</button>
+    </form>
+    <a href="login.html">Already have one? Login here</a>
+</div>
+
+
+</body>
+</html>
